@@ -1,3 +1,7 @@
+:root {
+    font-size: $base-font-size
+}
+
 html {
     scroll-behavior: smooth;
 }
@@ -7,7 +11,8 @@ html {
 }
 
 body {
-    font-size: $base-font-size;
+    font-family: $font-primary;
+    background-color: $white;
 }
 
 ul {

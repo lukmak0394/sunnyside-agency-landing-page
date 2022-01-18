@@ -1,12 +1,11 @@
 .main-nav {
     @include flexbox;
     align-items: center;
-    position: sticky;
+    position: fixed;
     top: 0;
     height: 90px;
     width: 100%;
     z-index: 10;
-    background-color: coral;
     
     .container {
         align-items: center;
@@ -14,18 +13,35 @@
         .navbar {
             @include flexbox;
             margin-left: auto;
-
+            
             .nav-item {
+                font-family: $font-secondary;
 
                 .nav-link {
-                    padding: 10px 20px;
+                    padding: 10px 25px;
                     margin-right: 20px;
+                    color: $white;
+                    font-size: 0.9rem;
+                    border-radius: 25px;
+                    transition: all 0.3s;
                 }
 
-                .nav-link:last-of-type {
-                    margin-right: none;
+                .nav-link:hover{
+                    color: $primary-dark-cyan;
                 }
-            
+
+                #contact {
+                    margin-right: 0;
+                    background: $white;
+                    color: #111;
+                    font-family: $font-primary;
+                    text-transform: uppercase;
+                }
+
+                #contact:hover {
+                    background-color: rgba(255,255,255,0.3);
+                    color: $white;
+                }
             }
         }
         
@@ -41,83 +57,39 @@
                 display: none;
             }
 
-            .navbar-opened,
-            .navbar-closed {
-                display: block;
-                position: absolute;
-                margin: auto;
-                padding: 10px;
-                width: 60%;
-                text-align: left;
-                animation-duration: 0.4s;
-                background-color: turquoise;
-
-                .nav-item {
-                    padding: 5px 0;
-                    
-                    .nav-link {
-                        margin-right: 0;
-                        display: block;
-                        width: 100%;
-                        margin: auto;
-                        text-transform: uppercase;
-                    }
-                }
-            }
-
             .navbar-opened {
+                position: absolute;
                 top: 90px;
-                left: 0;
-                animation-name: show;
-            }
-
-            .navbar-closed {
-                top: 90px;
-                left: -100%;            
-                animation-name: hide;
-                animation-duration: 0.4s;
+                right: 25px;
+                left: 25px;
+                display: block;
+                padding: 20px;
+                background-color: $white;
+                text-align: center;
 
                 .nav-item {
-                    padding: 15px 0;
+                    padding: 20px 0;
                     
                     .nav-link {
                         margin-right: 0;
-                        display: block;
-                        width: 100%;
-                        margin: auto;
-                        font-size: 20px;
-                        text-transform: uppercase;
+                        color: $neutral-d-gray-blue;
                     }
-                }
-            }
 
-            @keyframes show {
-                0% {
-                    left: -100%;
-                    opacity: 0;
-                }
-            
-                100% {
-                    left: 0px;
-                    opacity: 1;
-                }
-            }
+                    #contact {
+                        background: $primary-yellow;
+                    }
 
-            @keyframes hide {
-                0% {
-                    left: 0;
-                    opacity: 1;
-                }
-            
-                100% {
-                    left: -100%;
-                    opacity: 0;
+                    #contact:hover {
+                        background-color: rgba(1,1,1,0.7);
+                        color: $primary-yellow;
+                    }
                 }
             }
 
             .menu-icon {
                 margin-left: auto;
                 display: block;
+                color: $white;
             }
         }
     }
