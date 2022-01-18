@@ -1,0 +1,36 @@
+.about {
+
+    .img-tile {
+        img {
+            width: 100%;
+            height: 100%;
+        }
+    }
+    
+    .text-tile {
+        @include flexbox;
+        align-content: center;
+        padding: 0 100px;        
+    }
+
+}
+
+@media screen and (max-width: 767px) {
+    .about {
+        .row {
+            div:nth-of-type(2) {
+                order: -1;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .about {
+        .text-tile {
+            padding: 60px 30px;
+            justify-content: center;
+            text-align: center;
+        }
+    }
+}
