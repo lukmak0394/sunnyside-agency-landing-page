@@ -16,12 +16,12 @@
     <header>
         <nav id="main-nav" class="main-nav">
             <div class="container">
-                <img class="logo" src="../images/logo.svg"><a href="#"></a></img>
+                <a href="#"><img class="logo" src="../images/logo.svg" alt="logo"></a>
                 <ul class="navbar">
                     <li class="nav-item"><a href="#about" class="nav-link">About</a></li>
                     <li class="nav-item"><a href="#" class="nav-link">Services</a></li>
                     <li class="nav-item"><a href="#" class="nav-link">Projects</a></li>
-                    <li class="nav-item"><a href="#" class="nav-link" id="contact">Contact</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link contact">Contact</a></li>
                 </ul>
                 <button class="menu-icon">
                     <i class="fas fa-bars fa-2x"></i>
@@ -29,16 +29,20 @@
             </div>
         </nav>
         <div class="header-content">
-            <h1>We are creative</h1>
+            <h1>We are creatives</h1>
         </div>
-        <img class="icon-arrow" src="../images/icon-arrow-down.svg" alt="icon-arrow">
+        <a href="#about" class="icon-holder"><img class="icon-arrow" src="../images/icon-arrow-down.svg" alt="icon-arrow"></a>
     </header>
     <section id="about" class="about">
         <div class="row">
             <div class="text-tile col-xl-6 col-lg-6 col-md-6 col-sm" >
-                <h2>Tile header</h2> 
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae in nihil odit minus, eveniet itaque neque eligendi harum consequuntur! Sed voluptas accusamus laudantium suscipit deleniti ex. Pariatur enim officiis iste!</p>   
-                <a href="">Learn More</a>   
+                <h2 class="tile-header">Transform your brand</h2> 
+                <p class="tile-content">Using a collaborative formula of designers, researchers, photographers, videographers, and copywriters, we'll build and extend your brand in digital places.</p>  
+                <div class="tile-link-holder">
+                    <a href="" class="tile-link">Learn More</a>
+                    <span class="link-line link-line-yellow"></span>
+                </div>
+                
             </div>
 
             <div class="img-tile col-xl-6 col-lg-6 col-md-6 col-sm">
@@ -51,28 +55,31 @@
 
         
             <div class="text-tile col-xl-6 col-lg-6 col-md-6 col-sm" >
-                <h2>Tile header</h2> 
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae in nihil odit minus, eveniet itaque neque eligendi harum consequuntur! Sed voluptas accusamus laudantium suscipit deleniti ex. Pariatur enim officiis iste!</p>   
-                <a href="">Learn More</a>  
+                <h2 class="tile-header">Stand out to the right audience</h2> 
+                <p class="tile-content">We are a full-service creative agency specializing in helping brands grow fast. 
+                Engage your clients through compelling visuals that do most of the marketing for you.</p>   
+                <div class="tile-link-holder">
+                    <a href="" class="tile-link">Learn More</a>
+                    <span class="link-line link-line-red"></span>
+                </div> 
             </div> 
             
             <div class="img-tile col-xl-6 col-lg-6 col-md-6 col-sm">
-                <div class="over">
-                    <h2>Tile header</h2>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure, debitis illo tempore minus hic accusamus!</p>
+                <div class="about-tile-overlay">
+                    <h3>Graphic design</h3>
+                    <p>Great design makes you memorable. We deliver artwork that underscores your brand message and captures potential clients' attention.</p>
                 </div>
                 <img src="images/desktop/image-graphic-design.jpg" alt="">
             </div>
 
             <div class="img-tile col-xl-6 col-lg-6 col-md-6 col-sm">
-                <div class="over">
-                    <h2>Tile header</h2>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure, debitis illo tempore minus hic accusamus!</p>
+                <div class="about-tile-overlay">
+                    <h3>Photography</h3>
+                    <p>Increase your credibility by getting the most stunning, high-quality photos that improve your business image.</p>
                 </div>
                 <img src="images/desktop/image-photography.jpg" alt="">
             </div>
 
-            
         </div>
     </section>
     <script src="js/main.js"></script>

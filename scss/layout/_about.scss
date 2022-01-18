@@ -2,16 +2,27 @@
 
     .img-tile {
         position: relative;
-
-        .over {
-            position: absolute;
-            top: 0;
+        
+        .about-tile-overlay {
             @include flexbox;
             flex-direction: column;
             justify-content: flex-end;
+            position: absolute;
+            left: 25%;
+            right: 25%;
             text-align: center;
-            width: 100%;
             height: 100%;
+
+            h3,
+            p   {
+                opacity: 0.6;
+            }
+            
+            p {
+                font-family: $font-secondary;
+                margin-bottom: 30px;
+            }
+
         }
 
         img {
@@ -23,15 +34,82 @@
     .text-tile {
         @include flexbox;
         align-content: center;
-        padding: 0 100px;        
+        padding: 0 100px;
+        
+        .tile-header {
+            color: $neutral-des-blue;
+            font-size: 1.9rem;
+        }
+
+        .tile-content {
+            font-family: $font-secondary;
+            color: $neutral-g-blue;
+        }
+
+        .tile-link-holder {
+            text-transform: uppercase;
+            margin-top: 50px;
+            letter-spacing: 1px;
+            position: relative;
+            
+
+            .tile-link {
+                position: relative;
+                z-index: 2;
+            }
+
+            .link-line {
+                position: absolute;
+                left: 0;
+                bottom: -2px;
+                z-index: 1;
+                height: 10px;
+                width: 100%;
+                border-radius: 10px;
+                transition: all 0.3s;
+            }
+
+            .link-line-yellow {
+                background-color: rgba(255,214,2,0.2);
+            }
+
+            .link-line-red {
+                background-color: rgba(255,116,101,0.2);
+            }
+        }
+
+        .tile-link-holder:hover .link-line-yellow {
+            background-color: rgba(255,214,2,1);
+        }
+
+        .tile-link-holder:hover .link-line-red {
+            background-color: rgba(255,116,101,1);
+        }
+        
     }
 }
 
 @media screen and (max-width: 767px) {
     .about {
+        
+        .img-tile {
+            .about-tile-overlay {
+                padding: 60px 30px;
+                width: 100%;
+                left: 0;
+                right: 0;
+            }
+        }
+
         .row {
+            
             div:nth-of-type(2) {
                 order: -1;
+            }
+
+            div:nth-of-type(5),
+            div:nth-of-type(6) {
+                height: 600px;
             }
         }
     }

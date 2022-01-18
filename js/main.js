@@ -1,5 +1,7 @@
-const menuIcon = document.querySelector('.menu-icon');
+window.addEventListener('scroll',navColorChange);
+const mainNav = document.querySelector('.main-nav');
 
+const menuIcon = document.querySelector('.menu-icon');
 const navBar = document.querySelector('.navbar');
 
 menuIcon.addEventListener('click',function() {
@@ -16,4 +18,12 @@ menuIcon.addEventListener('click',function() {
         menuIconInner.classList.add('fa-times');
     }
 });
+
+function navColorChange() {
+    if (window.scrollY >= 200) {
+        mainNav.classList.add('nav-bg-blue');
+    } else {
+        mainNav.classList.remove('nav-bg-blue')
+    }
+}
 

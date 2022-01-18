@@ -372,6 +372,8 @@ a {
   height: 90px;
   width: 100%;
   z-index: 10;
+  -webkit-transition: all 0.4s;
+  transition: all 0.4s;
 }
 
 .main-nav .container {
@@ -393,7 +395,8 @@ a {
   font-family: "Barlow", sans-serif;
 }
 
-.main-nav .container .navbar .nav-item .nav-link {
+.main-nav .container .navbar .nav-item .nav-link,
+.main-nav .container .navbar .nav-item .contact {
   padding: 10px 25px;
   margin-right: 20px;
   color: white;
@@ -404,10 +407,11 @@ a {
 }
 
 .main-nav .container .navbar .nav-item .nav-link:hover {
-  color: #25564b;
+  border-radius: 0;
+  border-bottom: 5px solid #fad400;
 }
 
-.main-nav .container .navbar .nav-item #contact {
+.main-nav .container .navbar .nav-item .contact {
   margin-right: 0;
   background: white;
   color: #111;
@@ -415,7 +419,7 @@ a {
   text-transform: uppercase;
 }
 
-.main-nav .container .navbar .nav-item #contact:hover {
+.main-nav .container .navbar .nav-item .contact:hover {
   background-color: rgba(255, 255, 255, 0.3);
   color: white;
 }
@@ -444,14 +448,15 @@ a {
   .main-nav .container .navbar-opened .nav-item {
     padding: 20px 0;
   }
-  .main-nav .container .navbar-opened .nav-item .nav-link {
+  .main-nav .container .navbar-opened .nav-item .nav-link,
+  .main-nav .container .navbar-opened .nav-item .contact {
     margin-right: 0;
     color: #818498;
   }
-  .main-nav .container .navbar-opened .nav-item #contact {
+  .main-nav .container .navbar-opened .nav-item .contact {
     background: #fad400;
   }
-  .main-nav .container .navbar-opened .nav-item #contact:hover {
+  .main-nav .container .navbar-opened .nav-item .contact:hover {
     background-color: rgba(1, 1, 1, 0.7);
     color: #fad400;
   }
@@ -460,6 +465,10 @@ a {
     display: block;
     color: white;
   }
+}
+
+.nav-bg-blue {
+  background-color: rgba(90, 99, 108, 0.8);
 }
 
 header {
@@ -501,15 +510,20 @@ header .header-content h1 {
 
 header .icon-arrow {
   top: 45%;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+header .icon-arrow:hover {
+  -webkit-transform: scale(1.3, 1.3);
+          transform: scale(1.3, 1.3);
 }
 
 .about .img-tile {
   position: relative;
 }
 
-.about .img-tile .over {
-  position: absolute;
-  top: 0;
+.about .img-tile .about-tile-overlay {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -522,9 +536,21 @@ header .icon-arrow {
   -webkit-box-pack: end;
       -ms-flex-pack: end;
           justify-content: flex-end;
+  position: absolute;
+  left: 25%;
+  right: 25%;
   text-align: center;
-  width: 100%;
   height: 100%;
+}
+
+.about .img-tile .about-tile-overlay h3,
+.about .img-tile .about-tile-overlay p {
+  opacity: 0.6;
+}
+
+.about .img-tile .about-tile-overlay p {
+  font-family: "Barlow", sans-serif;
+  margin-bottom: 30px;
 }
 
 .about .img-tile img {
@@ -543,11 +569,71 @@ header .icon-arrow {
   padding: 0 100px;
 }
 
+.about .text-tile .tile-header {
+  color: #23303e;
+  font-size: 1.9rem;
+}
+
+.about .text-tile .tile-content {
+  font-family: "Barlow", sans-serif;
+  color: #a7abae;
+}
+
+.about .text-tile .tile-link-holder {
+  text-transform: uppercase;
+  margin-top: 50px;
+  letter-spacing: 1px;
+  position: relative;
+}
+
+.about .text-tile .tile-link-holder .tile-link {
+  position: relative;
+  z-index: 2;
+}
+
+.about .text-tile .tile-link-holder .link-line {
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+  z-index: 1;
+  height: 10px;
+  width: 100%;
+  border-radius: 10px;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+.about .text-tile .tile-link-holder .link-line-yellow {
+  background-color: rgba(255, 214, 2, 0.2);
+}
+
+.about .text-tile .tile-link-holder .link-line-red {
+  background-color: rgba(255, 116, 101, 0.2);
+}
+
+.about .text-tile .tile-link-holder:hover .link-line-yellow {
+  background-color: #ffd602;
+}
+
+.about .text-tile .tile-link-holder:hover .link-line-red {
+  background-color: #ff7465;
+}
+
 @media screen and (max-width: 767px) {
+  .about .img-tile .about-tile-overlay {
+    padding: 60px 30px;
+    width: 100%;
+    left: 0;
+    right: 0;
+  }
   .about .row div:nth-of-type(2) {
     -webkit-box-ordinal-group: 0;
         -ms-flex-order: -1;
             order: -1;
+  }
+  .about .row div:nth-of-type(5),
+  .about .row div:nth-of-type(6) {
+    height: 600px;
   }
 }
 
