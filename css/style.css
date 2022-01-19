@@ -401,11 +401,6 @@ a {
           align-items: center;
 }
 
-.main-nav .container .logo {
-  -webkit-transform: scale(1.3, 1.3);
-          transform: scale(1.3, 1.3);
-}
-
 .main-nav .container .navbar {
   display: -webkit-box;
   display: -ms-flexbox;
