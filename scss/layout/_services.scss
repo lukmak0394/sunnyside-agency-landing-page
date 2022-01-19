@@ -1,0 +1,39 @@
+.services {
+
+    .serivces-tile-overlay {
+        @include flexbox;
+        flex-direction: column;
+        justify-content: flex-end;
+        position: absolute;
+        left: 25%;
+        right: 25%;
+        text-align: center;
+        height: 100%;
+
+        h3,
+        p   {
+            opacity: 0.6;
+        }
+        
+        p {
+            font-family: $font-secondary;
+            margin-bottom: 30px;
+        }
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .services {
+        .services-tile-overlay {
+            width: 100%;
+            padding: 60px 30px;
+            left: 0;
+            right: 0;
+        }
+
+        .img-tile:first-of-type,
+        .img-tile:nth-of-type(2) {
+            height: 600px;
+        }
+    }
+}

@@ -18,8 +18,7 @@
             .nav-item {
                 font-family: $font-secondary;
 
-                .nav-link,
-                .contact {
+                .nav-link {
                     padding: 10px 25px;
                     margin-right: 20px;
                     color: $white;
@@ -42,8 +41,8 @@
                 }
 
                 .contact:hover {
-                    background-color: rgba(255,255,255,0.3);
                     color: $white;
+                    background-color: rgba(255,255,255,0.3);
                 }
             }
         }
@@ -55,7 +54,40 @@
             border-radius: none;
         }
 
-        @media screen and (max-width: 992px) {
+    }
+}
+
+.nav-bg-blue {
+    background-color: rgba(25, 83, 107,0.8);
+
+    .container {
+
+        .navbar {
+
+            .nav-item {
+
+                .nav-link:hover {
+                    border-bottom: 5px solid $white;
+                }
+
+                .contact {
+                    color: rgba(255,116,101,1)
+                }
+                .contact:hover {
+                    color: $white;
+                    border-bottom: 0;
+                }
+
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .main-nav {
+
+        .container {
+
             .navbar {
                 display: none;
             }
@@ -73,8 +105,7 @@
                 .nav-item {
                     padding: 20px 0;
                     
-                    .nav-link,
-                    .contact {
+                    .nav-link {
                         margin-right: 0;
                         color: $neutral-d-gray-blue;
                     }
@@ -83,7 +114,13 @@
                         background: $primary-yellow;
                     }
 
+                    .nav-link:hover {
+                        color: $primary-soft-red;
+                        border-bottom: none;
+                    }
+
                     .contact:hover {
+                        border-radius: 25px;
                         background-color: rgba(1,1,1,0.7);
                         color: $primary-yellow;
                     }
@@ -99,9 +136,9 @@
     }
 }
 
-.nav-bg-blue {
-    background-color: rgba(90, 99, 108,0.8);
-}
+
+
+
 
 
 
