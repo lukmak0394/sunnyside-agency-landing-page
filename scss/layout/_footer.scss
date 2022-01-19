@@ -1,22 +1,23 @@
 .main-footer {
-    background-color: rgba(69, 140, 126,0.6);
+    background-color: rgba(69, 140, 126, 0.6);
     text-align: center;
     padding: 60px 0;
 
     .logo {
         margin: 20px auto;
+        transform: scale(1.5,1.5);
     }
 
     .footer-nav {
+        @include flex-center;
         display: flex;
         flex-wrap: nowrap;   
-        @include flex-center;
         width: 100%;
         padding: 20px 0;
         font-family: $font-secondary;
 
         .footer-nav-link {
-            color: rgba(69, 140, 126,0.9);
+            color: rgba(69, 140, 126, 0.902);
             padding: 0 25px;
             transition: all 0.3s;
         }
@@ -24,7 +25,28 @@
         .footer-nav-link:hover {
             color: $primary-dark-cyan;
         }
-        
+    }
+
+    .social {
+        @include flexbox;
+        @include flex-center;
+        width: 100%;
+        margin-top: 60px;
+    }
+
+    .icon {
+        padding: 0 15px;
+    }
+
+    .author {
+        color: $primary-dark-cyan;
+        font-family: $font-secondary;
+        font-size: 0.8rem;
+        margin-top: 50px;
+
+        a {
+            color: $primary-dark-cyan;
+        }
     }
 
 }
