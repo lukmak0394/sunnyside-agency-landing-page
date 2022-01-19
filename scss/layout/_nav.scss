@@ -71,10 +71,11 @@
                 }
 
                 .contact {
-                    color: rgba(255,116,101,1)
-                }
-                .contact:hover {
+                    background-color: rgba(255,255,255,0.3);
                     color: $white;
+                }
+
+                .contact:hover {
                     border-bottom: 0;
                 }
 
