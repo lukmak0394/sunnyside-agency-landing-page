@@ -327,6 +327,9 @@ a {
   .col-sm {
     width: 100%;
   }
+  .col-sm-6 {
+    width: 50%;
+  }
 }
 
 @media screen and (min-width: 768px) {
@@ -686,7 +689,8 @@ header .icon-arrow:hover {
 
 .testimonials {
   text-align: center;
-  padding: 60px 0;
+  padding-top: 80px;
+  padding-bottom: 120px;
 }
 
 .testimonials .testimonial-card {
@@ -727,6 +731,47 @@ header .icon-arrow:hover {
   }
   .testimonial-card:last-child {
     margin-bottom: 0;
+  }
+}
+
+.projects .project-img {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 600px;
+}
+
+.projects .project-1 {
+  background-image: url("../images/desktop/image-gallery-milkbottles.jpg");
+}
+
+.projects .project-2 {
+  background-image: url("../images/desktop/image-gallery-orange.jpg");
+}
+
+.projects .project-3 {
+  background-image: url("../images/desktop/image-gallery-cone.jpg");
+}
+
+.projects .project-4 {
+  background-image: url("../images/desktop/image-gallery-sugarcubes.jpg");
+}
+
+@media screen and (max-width: 767px) {
+  .projects .project-img {
+    height: 200px;
+  }
+  .projects .project-1 {
+    background-image: url("../images/mobile/image-gallery-milkbottles.jpg");
+  }
+  .projects .project-2 {
+    background-image: url("../images/mobile/image-gallery-orange.jpg");
+  }
+  .projects .project-3 {
+    background-image: url("../images/mobile/image-gallery-cone.jpg");
+  }
+  .projects .project-4 {
+    background-image: url("../images/mobile/image-gallery-sugar-cubes.jpg");
   }
 }
 /*# sourceMappingURL=style.css.map */
