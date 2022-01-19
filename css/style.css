@@ -774,4 +774,42 @@ header .icon-arrow:hover {
     background-image: url("../images/mobile/image-gallery-sugar-cubes.jpg");
   }
 }
+
+.main-footer {
+  background-color: rgba(69, 140, 126, 0.6);
+  text-align: center;
+  padding: 60px 0;
+}
+
+.main-footer .logo {
+  margin: 20px auto;
+}
+
+.main-footer .footer-nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  padding: 20px 0;
+  font-family: "Barlow", sans-serif;
+}
+
+.main-footer .footer-nav .footer-nav-link {
+  color: rgba(69, 140, 126, 0.9);
+  padding: 0 25px;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+.main-footer .footer-nav .footer-nav-link:hover {
+  color: #25564b;
+}
 /*# sourceMappingURL=style.css.map */

@@ -1,0 +1,30 @@
+.main-footer {
+    background-color: rgba(69, 140, 126,0.6);
+    text-align: center;
+    padding: 60px 0;
+
+    .logo {
+        margin: 20px auto;
+    }
+
+    .footer-nav {
+        display: flex;
+        flex-wrap: nowrap;   
+        @include flex-center;
+        width: 100%;
+        padding: 20px 0;
+        font-family: $font-secondary;
+
+        .footer-nav-link {
+            color: rgba(69, 140, 126,0.9);
+            padding: 0 25px;
+            transition: all 0.3s;
+        }
+
+        .footer-nav-link:hover {
+            color: $primary-dark-cyan;
+        }
+        
+    }
+
+}
