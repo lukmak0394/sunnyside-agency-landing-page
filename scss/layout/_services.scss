@@ -30,7 +30,12 @@
             left: 0;
             right: 0;
         }
+    }
+}
 
+@media screen and (max-width: 992px) {
+
+    .services {
         .img-tile:first-of-type,
         .img-tile:nth-of-type(2) {
             height: 600px;
