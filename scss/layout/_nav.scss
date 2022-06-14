@@ -7,7 +7,7 @@
     width: 100%;
     z-index: 10;
     transition: all 0.4s;
-    
+        
     .container {
         align-items: center;
 
@@ -15,8 +15,6 @@
             @include flexbox;
             margin-left: auto;
 
-            
-            
             .nav-item {
                 font-family: $font-secondary;
 
@@ -88,7 +86,7 @@
 
 @media screen and (max-width: 992px) {
     .main-nav {
-
+      
         .container {
 
             .navbar {

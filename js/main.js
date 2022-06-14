@@ -1,29 +1,25 @@
-window.addEventListener('scroll',navColorChange);
-const mainNav = document.querySelector('.main-nav');
-
-const menuIcon = document.querySelector('.menu-icon');
-const navBar = document.querySelector('.navbar');
-
-menuIcon.addEventListener('click',function() {
-    
-
-    const menuIconInner = menuIcon.children[0]
-    if (navBar.classList.contains('navbar-opened')) {
-        navBar.classList.remove('navbar-opened');
-        menuIconInner.classList.remove('fa-times');
-        menuIconInner.classList.add('fa-bars');
-    } else { 
-        navBar.classList.add('navbar-opened');
-        menuIconInner.classList.remove('fa-bars');
-        menuIconInner.classList.add('fa-times');
-    }
-});
-
-function navColorChange() {
+window.addEventListener('scroll',() => {
     if (window.scrollY >= 200) {
         mainNav.classList.add('nav-bg-blue');
     } else {
         mainNav.classList.remove('nav-bg-blue')
     }
-}
+});
+
+
+const navBtn = document.querySelector('.menu-icon');
+const navBar = document.querySelector('.navbar');
+const mainNav = document.querySelector('.main-nav');
+
+navBtn.addEventListener('click', () => {
+    
+    navBar.classList.toggle('navbar-opened');
+    mainNav.classList.toggle('navbar-bg-black');
+    navBtn.children[0].classList.toggle('fa-times');
+    
+});
+
+
+
+
 
