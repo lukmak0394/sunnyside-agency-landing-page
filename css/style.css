@@ -694,6 +694,21 @@ header .icon-arrow:hover {
 }
 
 .testimonials .testimonial-card {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   padding: 0 20px;
 }
 
@@ -715,11 +730,12 @@ header .icon-arrow:hover {
 }
 
 .testimonials .testimonial-card .client-name {
-  margin-top: 15px;
+  margin-top: auto;
   color: #23303e;
 }
 
 .testimonials .testimonial-card .client-details {
+  margin-top: auto;
   color: #a7abae;
   opacity: 0.8;
   margin-top: 5px;
